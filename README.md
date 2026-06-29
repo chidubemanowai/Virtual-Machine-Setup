@@ -87,6 +87,61 @@ Common issues encountered:
 * Checked SSH key permissions.
 * Confirmed correct username and IP address.
 
+# Virtual Machine Hardware Configuration
+
+## Windows VM Configuration
+
+| Configuration Item | Details |
+|---|---|
+| Operating System | Windows Server |
+| VM Size | Standard_B2s |
+| vCPUs | 2 |
+| Memory | 4 GiB |
+| Storage Type | Premium SSD |
+| OS Disk Type | Managed Disk |
+| Disk Size | 128 GB |
+| Network | Azure Virtual Network |
+| Remote Access | RDP / Azure Bastion |
+
+---
+
+## Linux VM Configuration
+
+| Configuration Item | Details |
+|---|---|
+| Operating System | Ubuntu Linux |
+| VM Size | Standard_B2s |
+| vCPUs | 2 |
+| Memory | 4 GiB |
+| Storage Type | Premium SSD |
+| OS Disk Type | Managed Disk |
+| Disk Size | 30 GB |
+| Network | Azure Virtual Network |
+| Remote Access | SSH / Azure Bastion |
+
+---
+
+## Storage Configuration
+
+The virtual machines use Azure Managed Disks with Premium SSD storage to provide reliable and high-performance disk operations.
+
+Storage details:
+
+- Disk Type: Premium SSD
+- Disk Management: Azure Managed Disk
+- OS Disk: Attached to each VM
+- Performance Tier: Based on selected disk size and VM configuration
+
+---
+
+## Hardware Verification
+
+The VM hardware configuration was verified through the Azure Portal:
+
+**Azure Portal → Virtual Machine → Overview → Size**
+
+**Azure Portal → Virtual Machine → Disks**
+
 ## Conclusion
 
 The Azure VM was successfully accessed remotely, security rules were configured, and access was restricted to authorized sources only.
